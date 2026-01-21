@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SProTradeBot</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+  </head>
+  <body>
+    <header class="header">
+      <div class="welcome-text-container">
+        <p class="welcome-text">Вітаю в ком'юніті</p>
+        <div class="username-container">
+          <p id="username" class="username">nazarhapak</p>
+          <img src="img/emoji.svg" alt="Waving hand emoji" class="welcome-emoji" />
+        </div>
+      </div>
+      <div class="header-links-container">
+        <a href="/">
+          <svg class="graph-icon">
+            <use href="img/graph.svg"></use>
+          </svg>
+        </a>
+        <button class="btn-contact">
+          <svg class="telegram-img">
+            <use href="img/telegram.svg"></use>
+          </svg>
+        </button>
+      </div>
+    </header>
+    <div class="main">
+      <p class="main-text">Навчайся, аналізуй, заробляй разом із ProTrade Community — отримуй підтримку від ком'юніті та автора курсу 4</p>
+
+      <div class="course-card">
+        <div class="label-container">
+          <span class="label">
+            <svg class="label-icon">
+              <use href="img/star.svg"></use>
+            </svg>
+            <span class="label-text">4</span>
+          </span>
+          <span class="label">
+            <svg class="label-icon">
+              <use href="img/time.svg"></use>
+            </svg>
+            <span class="label-text">1 година</span>
+          </span>
+        </div>
+        <p class="course-text">Пройдено: 0/6 уроків</p>
+        <p class="course-name">Hello trading</p>
+        <img src="img/lines.webp" alt="Gray lines" class="card-img" />
+        <div class="card-arrow">
+          <svg class="arrow-icon">
+            <use href="img/arrow-right.svg"></use>
+          </svg>
+        </div>
+      </div>
+
+      <div class="course-card locked">
+        <div class="label-container">
+          <span class="label">
+            <svg class="label-icon">
+              <use href="img/star.svg"></use>
+            </svg>
+            <span class="label-text">4</span>
+          </span>
+          <span class="label">
+            <svg class="label-icon">
+              <use href="img/time.svg"></use>
+            </svg>
+            <span class="label-text">2 години</span>
+          </span>
+        </div>
+        <p class="course-text">Пройдено: 0/16 уроків</p>
+        <p class="course-name">Technical & Fund Analysis</p>
+        <img src="img/lines.webp" alt="Gray lines" class="card-img" />
+        <div class="card-arrow">
+          <svg class="arrow-icon">
+            <use href="img/arrow-right.svg"></use>
+          </svg>
+        </div>
+      </div>
+
+      <div class="course-card locked">
+        <div class="label-container">
+          <span class="label">
+            <svg class="label-icon">
+              <use href="img/star.svg"></use>
+            </svg>
+            <span class="label-text">4</span>
+          </span>
+          <span class="label">
+            <svg class="label-icon">
+              <use href="img/time.svg"></use>
+            </svg>
+            <span class="label-text">3 години</span>
+          </span>
+        </div>
+        <p class="course-text">Пройдено: 0/11 уроків</p>
+        <p class="course-name">Smart Money Concept</p>
+        <img src="img/lines.webp" alt="Gray lines" class="card-img" />
+        <div class="card-arrow">
+          <svg class="arrow-icon">
+            <use href="img/arrow-right.svg"></use>
+          </svg>
+        </div>
+      </div>
+    </div>
+
+    <div class="course-card locked">
+        <div class="label-container">
+          <span class="label">
+            <svg class="label-icon">
+              <use href="img/star.svg"></use>
+            </svg>
+            <span class="label-text">5</span>
+          </span>
+          <span class="label">
+            <svg class="label-icon">
+              <use href="img/time.svg"></use>
+            </svg>
+            <span class="label-text">1 година</span>
+          </span>
+        </div>
+        <p class="course-text">Пройдено: 0/10 уроків</p>
+        <p class="course-name">Курс PRO</p>
+        <img src="img/lines.webp" alt="Gray lines" class="card-img" />
+        <div class="card-arrow">
+          <svg class="arrow-icon">
+            <use href="img/arrow-right.svg"></use>
+          </svg>
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <nav class="links-container">
+        <a href="/" class="link">
+          <svg class="link-icon">
+            <use href="img/logo.svg"></use>
+          </svg>
+          <p class="link-text">Ком'юніті</p>
+        </a>
+        <a href="/" class="link">
+          <svg class="link-icon">
+            <use href="img/book.svg"></use>
+          </svg>
+          <p class="link-text">Методички</p>
+        </a>
+        <a href="/" class="link link--home">
+          <svg class="link-icon">
+            <use href="img/home.svg"></use>
+          </svg>
+        </a>
+        <a href="/" class="link">
+          <svg class="link-icon">
+            <use href="img/robot.svg"></use>
+          </svg>
+          <p class="link-text">AI Бот</p>
+        </a>
+        <a href="/" class="link">
+          <svg class="link-icon">
+            <use href="img/question.svg"></use>
+          </svg>
+          <p class="link-text">Підтримка</p>
+        </a>
+      </nav>
+    </footer>
+  </body>
+  <script>
+    let tg = window.Telegram.WebApp;
+    let username = document.getElementById("username");
+    if (tg.initDataUnsafe.user.username) 
+      username.innerText = `@${tg.initDataUnsafe.user.username}`;
+    else
+      username.innerHTML = `${tg.initDataUnsafe.user.first_name}`;
+  </script>
+</html>
