@@ -109,28 +109,27 @@
     </div>
 
     <div class="course-card locked">
-        <div class="label-container">
-          <span class="label">
-            <svg class="label-icon">
-              <use href="img/star.svg"></use>
-            </svg>
-            <span class="label-text">5</span>
-          </span>
-          <span class="label">
-            <svg class="label-icon">
-              <use href="img/time.svg"></use>
-            </svg>
-            <span class="label-text">1 година</span>
-          </span>
-        </div>
-        <p class="course-text">Пройдено: 0/10 уроків</p>
-        <p class="course-name">Курс PRO</p>
-        <img src="img/lines.webp" alt="Gray lines" class="card-img" />
-        <div class="card-arrow">
-          <svg class="arrow-icon">
-            <use href="img/arrow-right.svg"></use>
+      <div class="label-container">
+        <span class="label">
+          <svg class="label-icon">
+            <use href="img/star.svg"></use>
           </svg>
-        </div>
+          <span class="label-text">5</span>
+        </span>
+        <span class="label">
+          <svg class="label-icon">
+            <use href="img/time.svg"></use>
+          </svg>
+          <span class="label-text">1 година</span>
+        </span>
+      </div>
+      <p class="course-text">Пройдено: 0/10 уроків</p>
+      <p class="course-name">Курс PRO</p>
+      <img src="img/lines.webp" alt="Gray lines" class="card-img" />
+      <div class="card-arrow">
+        <svg class="arrow-icon">
+          <use href="img/arrow-right.svg"></use>
+        </svg>
       </div>
     </div>
 
@@ -153,7 +152,7 @@
             <use href="img/home.svg"></use>
           </svg>
         </a>
-        <a href="/" class="link">
+        <a href="/pages/bot.html" class="link">
           <svg class="link-icon">
             <use href="img/robot.svg"></use>
           </svg>
@@ -171,9 +170,7 @@
   <script>
     let tg = window.Telegram.WebApp;
     let username = document.getElementById("username");
-    if (tg.initDataUnsafe.user.username) 
-      username.innerText = `@${tg.initDataUnsafe.user.username}`;
-    else
-      username.innerHTML = `${tg.initDataUnsafe.user.first_name}`;
+    if (tg.initDataUnsafe.user.username) username.innerText = `@${tg.initDataUnsafe.user.username}`;
+    else username.innerHTML = `${tg.initDataUnsafe.user.first_name}`;
   </script>
 </html>

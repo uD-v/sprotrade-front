@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SProTradeBot</title>
+    <link rel="stylesheet" href="../css/bot.css" />
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+  </head>
+  <body class="bot-body">
+    <header class="header">
+      <h1 class="heading">ProTrade</h1>
+      <span class="label">Ai</span>
+    </header>
+    <div class="main">
+      <div class="select-container">
+        <select name="asset" id="asset">
+          <button><selectedcontent></selectedcontent></button>
+          <option value="AAPL">
+            <img src="../img/assets/apple.svg" alt="Apple stock logo" class="option-img" />
+            <p class="option-text">AAPL</p>
+          </option>
+          <option value="GOLD">
+            <img src="../img/assets/gold.svg" alt="Gold stock logo" class="option-img" />
+            <p class="option-text">GOLD</p>
+          </option>
+          <option value="SPX">
+            <img src="../img/assets/s-and-p-500.svg" alt="S&P 500 Index logo" class="option-img" />
+            <p class="option-text">SPPX</p>
+          </option>
+        </select>
+        <select name="time" id="time">
+          <button><selectedcontent></selectedcontent></button>
+          <option value="1min">
+            <img src="../img/time.svg" alt="clock icon" class="option-img img-invert" />
+            <p class="option-text">1 min</p>
+          </option>
+          <option value="2min">
+            <img src="../img/time.svg" alt="clock icon" class="option-img img-invert" />
+            <p class="option-text">2 min</p>
+          </option>
+          <option value="5min">
+            <img src="../img/time.svg" alt="clock icon" class="option-img img-invert" />
+            <p class="option-text">5 min</p>
+          </option>
+        </select>
+      </div>
+      <div class="select-container">
+        <select name="strategy" id="strategy" class="stretch-select">
+          <button><selectedcontent></selectedcontent></button>
+          <option value="rsi">
+            <img src="../img/strategy.svg" alt="Graph" class="option-img img-invert" />
+            <p class="option-text">RSI</p>
+          </option>
+          <option value="moving-averages">
+            <img src="../img/strategy.svg" alt="Graph" class="option-img img-invert" />
+            <p class="option-text">Moving averages</p>
+          </option>
+          <option value="fibonacci">
+            <img src="../img/strategy.svg" alt="Graph" class="option-img img-invert" />
+            <p class="option-text">Fibonacci</p>
+          </option>
+        </select>
+      </div>
+      <img src="../img/robot3d.png" alt="" class="bot-img" />
+      <button class="btn-signal">Отримати сигнал</button>
+    </div>
+    <footer class="footer">
+      <nav class="links-container">
+        <a href="/" class="link">
+          <svg class="link-icon">
+            <use href="../img/logo.svg"></use>
+          </svg>
+          <p class="link-text">Ком'юніті</p>
+        </a>
+        <a href="/" class="link">
+          <svg class="link-icon">
+            <use href="../img/book.svg"></use>
+          </svg>
+          <p class="link-text">Методички</p>
+        </a>
+        <a href="/" class="link link--home">
+          <svg class="link-icon">
+            <use href="../img/home.svg"></use>
+          </svg>
+        </a>
+        <a href="#" class="link">
+          <svg class="link-icon">
+            <use href="../img/robot.svg"></use>
+          </svg>
+          <p class="link-text">AI Бот</p>
+        </a>
+        <a href="/" class="link">
+          <svg class="link-icon">
+            <use href="../img/question.svg"></use>
+          </svg>
+          <p class="link-text">Підтримка</p>
+        </a>
+      </nav>
+    </footer>
+    <script src="../js/bot.js"></script>
+  </body>
+</html>
