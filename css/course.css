@@ -1,0 +1,390 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Unbounded:wght@200..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*:focus {
+  outline: none;
+  box-shadow: 0 0 0 0.4rem rgba(59, 131, 246, 0.5) !important;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Inter", sans-serif;
+  line-height: 1;
+  color: #fff;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+input,
+textarea,
+button {
+  font-family: inherit;
+}
+
+body {
+  background-color: #171717;
+  padding-bottom: 3rem;
+}
+
+/* HEADER */
+
+.header {
+  padding: 0 2rem;
+  background-image: radial-gradient(140% 80% at left bottom, rgb(35, 82, 52) 0%, rgb(23, 23, 23) 85%), radial-gradient(140% 80% at right bottom, rgb(25, 33, 28) 0%, rgb(23, 23, 23) 85%);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-bottom: 5rem;
+}
+
+.text-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 9rem;
+  margin-bottom: 4rem;
+}
+
+.arrow-back {
+  height: 2.4rem;
+  width: 2.4rem;
+  color: #fff;
+  transition: all 0.3s;
+}
+
+.arrow-back:hover {
+  cursor: pointer;
+  color: #1fb058;
+}
+
+.header-text {
+  font-family: "Unbounded", sans-serif;
+  font-size: 1.6rem;
+  text-align: center;
+  font-weight: 600;
+}
+
+.label-container {
+  display: flex;
+  gap: 1.2rem;
+  margin-bottom: 1.2rem;
+}
+
+.label {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.4rem;
+  border-radius: 999px;
+  width: fit-content;
+  padding: 1rem 1.2rem;
+  background: #000;
+  background: radial-gradient(rgb(0, 0, 0) 20%, rgb(50, 59, 54) 80%);
+}
+
+.label-text {
+  font-family: "Unbounded", sans-serif;
+  font-size: 1.4rem;
+}
+
+.label-icon {
+  width: 1.6rem;
+  height: 1.6rem;
+}
+
+.course-name {
+  font-family: "Unbounded", sans-serif;
+  font-size: 2.8rem;
+  font-weight: 700;
+  position: relative;
+  z-index: 1;
+  max-width: 85%;
+  line-height: 1.2;
+  margin-bottom: 0.8rem;
+}
+
+.course-info-container {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 1.6rem;
+}
+
+.course-info {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.info-icon {
+  width: 2.4rem;
+  height: 2.4rem;
+  color: #2cfc7e;
+}
+
+.info-text {
+  color: #2cfc7e;
+  font-size: 1.6rem;
+  font-family: "Inter", sans-serif;
+}
+
+.course-description {
+  font-family: "Inter", sans-serif;
+  font-size: 1.6rem;
+  line-height: 1.5;
+  margin-bottom: 2rem;
+}
+
+.author-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.author-text {
+  font-family: "Inter", sans-serif;
+  font-size: 1.2rem;
+  margin-bottom: 0.6rem;
+}
+
+.author-name {
+  font-family: "Unbounded", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+/* MAIN */
+
+.main {
+  transform: translateY(-3rem);
+  background-color: #000;
+  border-top-left-radius: 3rem;
+  border-top-right-radius: 3rem;
+  padding: 3rem 2rem;
+}
+
+.program-text {
+  font-family: "Unbounded", sans-serif;
+  font-size: 1.8rem;
+  margin-bottom: 2.4rem;
+  margin-left: 1.2rem;
+}
+
+.module {
+  background-color: #106231;
+  border-radius: 2rem;
+  padding: 2rem;
+  transition: all 0.3s;
+  margin-bottom: 2rem;
+}
+
+.module:hover {
+  cursor: pointer;
+  background-color: #0d5028;
+}
+
+.module:hover .module-arrow {
+  color: #119d49;
+}
+
+.module-header {
+  display: flex;
+  align-items: center;
+}
+
+.module-name-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.8rem;
+}
+
+.module-name {
+  font-family: "Unbounded", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+.module-label {
+  font-family: "Unbounded", sans-serif;
+  font-size: 1.4rem;
+  font-weight: 600;
+  background-image: radial-gradient(#1f1f1f 20%, #094622 60%);
+  padding: 0.4rem 0.8rem;
+  border-radius: 999px;
+  border: 1px solid #999;
+  margin-left: 1rem;
+}
+
+.module-info {
+  font-family: "Inter", sans-serif;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #999;
+}
+
+.module-arrow {
+  width: 3.2rem;
+  height: 3.2rem;
+  color: #14d260;
+  margin-left: auto;
+  transition: all 0.3s;
+}
+
+.module.locked {
+  background-color: #333;
+  filter: brightness(0.5);
+  position: relative;
+}
+
+.module.locked:hover {
+  cursor: not-allowed;
+}
+
+.module.locked::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 1;
+}
+
+.module.locked::before {
+  content: "";
+  background: url(../img/lock.svg) no-repeat center;
+  background-size: contain;
+  width: 3rem;
+  height: 3rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  filter: invert(1);
+  z-index: 2;
+}
+
+.module.locked .module-label {
+  background: #292929;
+}
+
+.module.locked .module-arrow {
+  color: #5b5b5b;
+}
+
+.module.open {
+  background-color: #222;
+  border: 1px solid #555;
+}
+
+.module.open .module-label {
+  background: #444;
+}
+
+.module.open .module-arrow {
+  transform: rotate(180deg);
+  color: #5b5b5b;
+}
+
+.module-main {
+  display: none;
+}
+
+.module.open .module-main {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.lesson {
+  display: flex;
+  align-items: center;
+}
+
+.lesson-icon {
+  height: 5rem;
+  width: 5rem;
+  padding: 1.4rem 1.3rem 1.4rem 1.5rem;
+  background-color: #555;
+  color: #fff;
+  border-radius: 100%;
+}
+
+.lesson-name {
+  font-family: "Inter", sans-serif;
+  font-size: 1.6rem;
+  margin-left: 1rem;
+}
+
+.checkbox {
+  width: 3rem;
+  height: 3rem;
+  border: 1px solid #555;
+  border-radius: 0.4rem;
+  margin-left: auto;
+}
+
+/* FOOTER */
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background-color: #000;
+  width: 100%;
+  padding: 2rem;
+}
+
+.links-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+  text-decoration: inherit;
+  color: inherit;
+  fill: #aaa;
+  color: #aaa;
+  transition: all 0.3s;
+}
+
+.link:hover {
+  fill: #fff;
+  color: #fff;
+}
+
+.link--home:hover {
+  background-color: #1fb058;
+}
+
+.link-icon {
+  height: 2.4rem;
+  width: 2.4rem;
+}
+
+.link-text {
+  font-size: 1rem;
+  font-family: "Inter", sans-serif;
+}
+
+.link--home {
+  background-color: #343434;
+  width: 5.2rem;
+  height: 5.2rem;
+  justify-self: center;
+  border-radius: 100%;
+}
