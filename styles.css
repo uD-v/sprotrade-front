@@ -77,10 +77,12 @@ body {
   height: 3.2rem;
   width: 3.2rem;
   color: #fff;
+  filter: invert(1);
 }
 
 .graph-icon:hover {
   color: #1fb058;
+  filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(10000%) hue-rotate(70deg);
 }
 
 .btn-contact {
@@ -101,8 +103,9 @@ body {
 
 .btn-contact:hover {
   cursor: pointer;
-  background-color: #1fb058;
+  background-color: #b01f95;
   color: #fff;
+  filter: invert(1);
 }
 
 .telegram-img {
@@ -163,6 +166,7 @@ body {
   width: 1.6rem;
   height: 1.6rem;
   color: #fff;
+  filter: invert(1);
 }
 
 .course-text {
@@ -210,6 +214,7 @@ body {
   height: 3.2rem;
   width: 3.2rem;
   color: #fff;
+  filter: invert(1);
 }
 
 .course-card.locked {

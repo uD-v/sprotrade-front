@@ -77,7 +77,7 @@ function renderCourses(courses) {
     const label = document.createElement("span");
     label.classList.add("label");
     labelContainer.appendChild(label);
-    label.innerHTML = `<svg class="label-icon"><use href="img/time.svg"></use></svg>`;
+    label.innerHTML = `<img class="label-icon" src="img/time.svg" alt="Time"/>`;
 
     const labelText = document.createElement("span");
     labelText.classList.add("label-text");
@@ -107,9 +107,7 @@ function renderCourses(courses) {
       "beforeend",
       `<img src="img/lines.webp" alt="Lines" class="card-img" />
       <div class="card-arrow">
-        <svg class="arrow-icon">
-          <use href="img/arrow-right.svg"></use>
-        </svg>
+        <img class="arrow-icon" src="img/arrow-right.svg" alt="Arrow">
       </div>`,
     );
 
