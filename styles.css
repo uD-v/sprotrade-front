@@ -276,6 +276,7 @@ body {
 .link-icon {
   height: 2.4rem;
   width: 2.4rem;
+  filter: invert(0.5);
 }
 
 .link-text {

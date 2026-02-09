@@ -54,6 +54,7 @@ body {
   width: 2.4rem;
   color: #fff;
   transition: all 0.3s;
+  filter: invert(1);
 }
 
 .arrow-back:hover {
@@ -96,6 +97,7 @@ body {
 .label-icon {
   width: 1.6rem;
   height: 1.6rem;
+  filter: invert(1);
 }
 
 .course-name {
@@ -315,7 +317,6 @@ body {
   width: 5rem;
   padding: 1.4rem 1.3rem 1.4rem 1.5rem;
   background-color: #555;
-  color: #fff;
   border-radius: 100%;
 }
 
@@ -331,6 +332,19 @@ body {
   border: 1px solid #555;
   border-radius: 0.4rem;
   margin-left: auto;
+  position: relative;
+}
+
+.checkbox.checked::after {
+  content: "";
+  position: absolute;
+  width: 2.4rem;
+  height: 2.4rem;
+  background-image: url(../img/checkmark.svg);
+  color: #119d49;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 /* FOOTER */
@@ -374,6 +388,7 @@ body {
 .link-icon {
   height: 2.4rem;
   width: 2.4rem;
+  filter: invert(0.5);
 }
 
 .link-text {

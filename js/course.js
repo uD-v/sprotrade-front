@@ -3,7 +3,7 @@ const courseId = urlParams.get("courseId");
 let accessToken = sessionStorage.getItem("accessToken");
 let refreshToken = sessionStorage.getItem("refreshToken");
 
-const url = "https://90b7a73d7102.ngrok-free.app";
+const url = "https://5888-91-196-55-62.ngrok-free.app";
 
 async function getData() {
   let course = await fetch(`${url}/api/courses/${courseId}/open/`, {
@@ -63,7 +63,6 @@ async function getData() {
   course.modules.forEach((module) => {
     if (module.exercise.is_completed) exercisesCompleted++;
   });
-  console.log(exercisesCompleted);
 
   const lessonsCompletedEl = document.querySelector("#lessonsCompleted");
   lessonsCompletedEl.innerHTML = `Уроки ${lessonsCompleted}/${course.lessons_quantity}`;
@@ -117,14 +116,52 @@ async function getData() {
       })
       .catch((err) => console.error("Error loading SVG:", err));
 
-    moduleEl.addEventListener("click", function (event) {
+    moduleHeaderEl.addEventListener("click", function (event) {
       moduleEl.classList.toggle("open");
     });
 
+    const moduleMainEl = document.createElement("div");
+    moduleMainEl.classList.add("module-main");
+    moduleEl.appendChild(moduleMainEl);
+
+    // console.log(module.lessons_quantity);
+    // console.log(module.exercise);
+    console.log(module);
+    module.lessons.forEach((lesson) => {
+      const lessonEl = document.createElement("div");
+      lessonEl.classList.add("lesson");
+      lessonEl.innerHTML = `<img class="lesson-icon" src="../img/play.svg" alt="Play"/>`;
+      moduleMainEl.appendChild(lessonEl);
+
+      const lessonNameEl = document.createElement("p");
+      lessonNameEl.classList.add("lesson-name");
+      lessonNameEl.innerHTML = lesson.title;
+      lessonEl.appendChild(lessonNameEl);
+
+      const checkbox = document.createElement("div");
+      checkbox.classList.add("checkbox");
+      if (lesson.is_completed) {
+        checkbox.classList.add("checked");
+      }
+      lessonEl.appendChild(checkbox);
+    });
+
+    if (module.exercise) {
+      const exerciseEl = document.createElement("div");
+      exerciseEl.classList.add("lesson");
+      exerciseEl.innerHTML = `<img class="lesson-icon" src="../img/test.svg" alt="Test"/>
+            <p class="lesson-name">${module.exercise.title}</p>
+            <div class="checkbox"></div>`;
+      moduleMainEl.appendChild(exerciseEl);
+
+      const checkbox = exerciseEl.querySelector(".checkbox");
+      if (module.exercise.is_completed) {
+        checkbox.classList.add("checked");
+      }
+    }
+
     main.appendChild(moduleEl);
   });
-
-  console.log(course);
 }
 
 getData();

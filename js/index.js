@@ -1,6 +1,6 @@
 let currentCourse;
 const mainDiv = document.querySelector(".main");
-const url = "https://90b7a73d7102.ngrok-free.app";
+const url = "https://5888-91-196-55-62.ngrok-free.app";
 
 async function initializeApp() {
   try {
